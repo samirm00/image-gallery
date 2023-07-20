@@ -1,6 +1,6 @@
 # Image gallery
 
->
+> A simple website allows the user to search for movies.
 
 ## Table of contents
 
@@ -15,9 +15,11 @@
 
 ## General info
 
+> The objective of the project is to practice separation of concern in JavaScript.
+
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/screenshot.png)
 
 ## Technologies
 
@@ -33,7 +35,28 @@ clone the repo and start using the stop watch.
 ## Code Examples
 
 ```js
+import { data, dom } from '../data.js';
+import createImage from '../components/createImage.js';
 
+const loadHandler = () => {
+    data.images.forEach((imgData) => {
+        const id = imgData.id;
+        const imgExist = dom.imgsDom.filter((imgDom) => imgDom.id === id)[0];
+        if (!imgExist) {
+            const imageDom = createImage(imgData);
+            dom.imgsDom.push({
+                id: id,
+                title: imgData.title,
+                dataName: imgData.dataName,
+                dom: imageDom,
+            });
+
+            dom.images.append(imageDom);
+        }
+    });
+};
+
+export default loadHandler;
 ```
 
 ## Features
