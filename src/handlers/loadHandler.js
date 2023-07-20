@@ -17,8 +17,6 @@ const loadHandler = () => {
             dom.images.append(imageDom);
         }
     });
-
-    console.log(dom.imgsDom);
 };
 
 export default loadHandler;
