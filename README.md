@@ -4,14 +4,14 @@
 
 ## Table of contents
 
--   [General info](#general-info)
--   [Screenshots](#screenshots)
--   [Technologies](#technologies)
--   [Setup](#setup)
--   [Features](#features)
--   [Status](#status)
--   [Inspiration](#inspiration)
--   [Contact](#contact)
+- [General info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Status](#status)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
 
 ## General info
 
@@ -23,10 +23,10 @@
 
 ## Technologies
 
--   JavaScript
--   HTML5
--   CSS3
--   VSC code
+- JavaScript
+- HTML5
+- CSS3
+- VSC code
 
 ## Setup
 
@@ -39,21 +39,21 @@ import { data, dom } from '../data.js';
 import createImage from '../components/createImage.js';
 
 const loadHandler = () => {
-    data.images.forEach((imgData) => {
-        const id = imgData.id;
-        const imgExist = dom.imgsDom.filter((imgDom) => imgDom.id === id)[0];
-        if (!imgExist) {
-            const imageDom = createImage(imgData);
-            dom.imgsDom.push({
-                id: id,
-                title: imgData.title,
-                dataName: imgData.dataName,
-                dom: imageDom,
-            });
+  data.images.forEach((imgData) => {
+    const id = imgData.id;
+    const imgExist = dom.imgsDom.filter((imgDom) => imgDom.id === id)[0];
+    if (!imgExist) {
+      const imageDom = createImage(imgData);
+      dom.imgsDom.push({
+        id: id,
+        title: imgData.title,
+        dataName: imgData.dataName,
+        dom: imageDom,
+      });
 
-            dom.images.append(imageDom);
-        }
-    });
+      dom.images.append(imageDom);
+    }
+  });
 };
 
 export default loadHandler;

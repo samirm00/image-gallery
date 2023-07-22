@@ -2,16 +2,16 @@ import { data, dom } from '../data.js';
 import insertChildAtIndex from '../components/insertChildAtIndex.js';
 
 const searchImageHandler = (value) => {
-    dom.imgsDom.forEach((imgDom) => {
+    dom.imgs.forEach((img) => {
         // check if the img already exist in the dom
-        const imgExistInDom = document.getElementById(imgDom.id);
+        const imgExistInDom = document.getElementById(img.id);
 
         if (value.length > 2) {
-            if (!imgDom.title.toLowerCase().includes(value.toLowerCase())) {
-                imgDom.dom.remove();
+            if (!img.title.toLowerCase().includes(value.toLowerCase())) {
+                img.dom.remove();
             } else {
                 if (!imgExistInDom) {
-                    insertChildAtIndex(dom.images, imgDom.dom, imgDom.id - 1);
+                    insertChildAtIndex(dom.images, img.dom, img.id - 1);
                 }
             }
 
@@ -26,7 +26,7 @@ const searchImageHandler = (value) => {
         } else {
             dom.message.remove();
             if (!imgExistInDom) {
-                insertChildAtIndex(dom.images, imgDom.dom, imgDom.id - 1);
+                insertChildAtIndex(dom.images, img.dom, img.id - 1);
             }
         }
     });

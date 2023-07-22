@@ -5,10 +5,10 @@ const loadHandler = () => {
     // loop throw images
     data.images.forEach((imgData) => {
         const id = imgData.id;
-        const imgExist = dom.imgsDom.filter((img) => img.id === id)[0];
+        const imgExist = dom.imgs.filter((img) => img.id === id)[0];
         if (!imgExist) {
             const imageDom = createImage(imgData);
-            dom.imgsDom.push({
+            dom.imgs.push({
                 id: id,
                 title: imgData.title,
                 dom: imageDom,

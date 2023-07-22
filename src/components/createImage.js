@@ -1,5 +1,3 @@
-
-
 const createImage = (imgData) => {
     // create container
     const container = document.createElement('div');

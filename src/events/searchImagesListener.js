@@ -1,6 +1,3 @@
-
-
-
 import { dom } from '../data.js';
 import searchImageHandler from '../handlers/searchImagesHandler.js';
 
