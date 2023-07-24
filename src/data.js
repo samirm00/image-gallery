@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     images: [
         {
             id: 1,
@@ -111,9 +111,4 @@ export const data = {
     ],
 };
 
-export const dom = {
-    input: document.getElementById('input'),
-    images: document.querySelector('.images'),
-    message: document.createElement('div'),
-    imgs: [],
-};
+export default data;

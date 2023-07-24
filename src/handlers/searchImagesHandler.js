@@ -1,4 +1,4 @@
-import { data, dom } from '../data.js';
+import dom from '../dom.js';
 import insertChildAtIndex from '../components/insertChildAtIndex.js';
 
 const searchImageHandler = (value) => {

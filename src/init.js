@@ -1,2 +1,5 @@
-import './events/loadListener.js';
-import './events/searchImagesListener.js';
+import loadListener from './events/loadListener.js';
+import searchImagesListener from './events/searchImagesListener.js';
+
+loadListener();
+searchImagesListener();

@@ -1,7 +1,11 @@
-import { dom } from '../data.js';
+import dom from '../dom.js';
 import searchImageHandler from '../handlers/searchImagesHandler.js';
 
-dom.input.addEventListener('keyup', () => {
-    const value = dom.input.value;
-    searchImageHandler(value);
-});
+const searchImagesListener = () => {
+    dom.input.addEventListener('keyup', () => {
+        const value = dom.input.value;
+        searchImageHandler(value);
+    });
+};
+
+export default searchImagesListener;

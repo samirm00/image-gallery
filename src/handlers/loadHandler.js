@@ -1,4 +1,5 @@
-import { data, dom } from '../data.js';
+import data from '../data.js';
+import dom from '../dom.js';
 import createImage from '../components/createImage.js';
 
 const loadHandler = () => {

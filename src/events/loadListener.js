@@ -1,2 +1,7 @@
 import loadHandler from '../handlers/loadHandler.js';
-window.addEventListener('load', loadHandler);
+
+const loadListener = () => {
+    window.addEventListener('load', loadHandler);
+};
+
+export default loadListener;
